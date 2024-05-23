@@ -93,3 +93,15 @@ def read_and_process_kin600_joint(file_path):
                 video = row[0]
                 vid_class = row[1]
                 model_kin600_spaceOnly(video, vid_class)
+
+# Call all the parsers
+read_and_process_howto100m_joint(howto100_file)
+read_and_process_howto100m_spaceOnly(howto100_file)
+read_and_process_kin600_joint(kinetics600_file)
+read_and_process_kin600_joint(kinetics600_file)
+
+# Print how much of each it got correct
+print(howTo100m_joint_correct)
+print(howTo100m_spaceOnly_correct)
+print(kin600_joint_correct)
+print(kin600_spaceOnly_correct)
