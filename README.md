@@ -39,23 +39,29 @@ cd TimeSformer
 python setup.py build develop
 ```
 
-------
-
-## Running the Default model
 
 -----
 
 ## Dataset
 
-We evaluate our AV-MAE on the commonly used video dataset - UCF101, which consists of over 13k (9.5k/3.5k train/val) video clips across 101 action classes, and is grouped into five types: Human-Object Interaction, Body-Motion Only, Human-Human Interaction, Playing Musical Instruments, and Sports. UCF101 contains web videos captured in uncontrolled settings, typically featuring camera movements, diverse lighting conditions, occasional partial occlusions, and occasional frames of low quality. This makes it an ideal resource for developing an advanced and robust encoder capable of getting high-quality video representations.
+We evaluate the TimeSformer on multiple datasets, in particular the Kinetics-600 and HowTo100M datasets. Kinetics-600 is an action recognition dataset with around 480k 10-second videos, spanning 600 action categories. HowTo100M is a dataset of narrated videos with instructions on how to perform tasks, comprising 136 million video clips from Youtube videos. We find it important to evaluate on both datasets because the type of videos differ, both in form, intent, and length. Thus, testing on both datasets gives us a better idea of how data quality impacts model performance.
 
-Download UCF101: [UCF101](https://www.crcv.ucf.edu/data/UCF101.php)
 
-### Preprocessing
 
-Please follow the instructions in [DATASET.md](videomae/DATASET.md) for data preparation.
+### Kinetics-600 Setup
 
-## Experiments on UCF101
+Kinetics-600 Download: [link](https://github.com/cvdfoundation/kinetics-dataset)
+
+After the download, resize the video to the short edge size of 256, then prepare the csv files for training, validation, and testing set as `train.csv`, `val.csv`, `test.csv`.
+
+### HowTo100M Setup
+
+The HowTo100M dataset is available [here](https://www.dropbox.com/sh/ttvsxwqypijjuda/AACmJx1CnddW6cVBoc21eSuva?dl=0)
+
+------
+
+
+## Experiments
 
 ### Model Training
 
