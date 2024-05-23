@@ -60,47 +60,6 @@ The HowTo100M dataset is available [here](https://www.dropbox.com/sh/ttvsxwqypij
 
 ------
 
-
-## Experiments
-
-### Model Training
-
-#### Video Reconstruction Training
-
-```bash
-bash scripts/ucf101/videomae_vit_base_patch16_224_tubemasking_ratio_0.75_epoch_3200/pretrain.sh
-```
-
-#### Video Classification Training from scratch
-
-```bash
-bash scripts/ucf101/videomae_vit_base_patch16_224_tubemasking_ratio_0.75_epoch_3200/finetune.sh
-```
-
-#### Video Classification Training using pre-trained model on the K400 dataset
-
-```bash
-bash scripts/ucf101/videomae_vit_base_patch16_224_tubemasking_ratio_0.75_epoch_3200/finetune_withpretrained.sh
-```
-
-### Loss Logs
-
-File names inside the 'Loss Logs' folder:
-
-- `cls_pretrain`
-- `cls_scratch`
-- `logs_modified_attention`
-- `logs_without_attention_original`
-- `original`
-
-### Sample Videos Generated
-
-Folder names that contain our video reconstruction samples:
-
-- `VideoMAE_Original`
-- `AV-MAE_withoutAtt`
-- `AV-MAE`
-
 ## Citation
 
 If you find the repository useful for your work, please cite our paper.
