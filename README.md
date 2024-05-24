@@ -14,8 +14,8 @@ To install and develop locally, follow these instructions, sourced from the Time
 First, set up a conda virtual environment
 
 ```bash
-conda create -n timesformer python=3.7 -y
-conda activate timesformer
+conda create -n (PROJECT_NAME) -y
+conda activate (PROJECT_NAME)
 ```
 
 Then install the following packages
